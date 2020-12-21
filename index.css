@@ -1,12 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+
+:root {
+  --primary: #ffc636;
+  --secondary: #0a0b5b;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 10px;
 }
 
-.landing-page {
+body {
+  font-family: "Source Code Pro", monospace;
+  background: var(--secondary);
+  color: #fff;
 }
 
-#bg-image {
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  /* color: white; */
+}
+
+.button {
+  display: inline-block;
+  background: none;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 0.6rem 0.5rem;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.button:hover {
+  color: #222;
+  background: var(--primary);
+}
+
+input,
+textarea {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: 2px solid #9893d3;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #dddbff;
+}
+
+p,
+a,
+li {
+  color: #9893d3;
+}
+
+h1,
+h3 {
+  font-size: 1.2em;
+}
+
+h2 {
+  font-size: 1.6em;
+}
+
+h4 {
+  font-size: 1.1em;
+}
+
+.leading {
+  font-size: 1.1em;
+}
+
+@media screen and (min-width: 620px) {
+}
+
+@media screen and (min-width: 960px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
 }
