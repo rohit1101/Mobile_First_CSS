@@ -15,6 +15,8 @@ body {
   font-family: "Source Code Pro", monospace;
   background: var(--secondary);
   color: #fff;
+  font-size: 10px;
+  /* overflow-x: hidden; */
 }
 
 li {
@@ -27,12 +29,13 @@ a {
 }
 
 .button {
+  font-size: 1rem;
   display: inline-block;
   background: none;
-  border: 2px solid var(--primary);
+  border: 0.15rem solid var(--primary);
   color: var(--primary);
   padding: 0.6rem 0.5rem;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 1.1rem 1.1rem 1.1rem 1.1rem;
 }
 
 .button:hover {
@@ -43,9 +46,9 @@ a {
 input,
 textarea {
   background: rgba(255, 255, 255, 0.05);
-  padding: 10px 16px;
-  border-radius: 20px;
-  border: 2px solid #9893d3;
+  padding: 1rem 1.6rem;
+  border-radius: 2rem;
+  border: 0.15rem solid #9893d3;
 }
 
 h1,
@@ -63,27 +66,313 @@ li {
 
 h1,
 h3 {
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 h2 {
-  font-size: 1.6em;
+  font-size: 1.2rem;
+  /* font-size: 1.6em; */
 }
 
 h4 {
-  font-size: 1.1em;
+  font-size: 1rem;
 }
 
 .leading {
-  font-size: 1.1em;
+  font-size: 1rem;
+}
+
+.copyright {
+  font-size: 1rem;
+}
+
+/* mobile devices  */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+}
+
+.nav {
+  /* mar */
+  margin: 0 1rem;
+}
+
+.nav h1 {
+  grid-column: 1/5;
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--primary);
+}
+
+.nav ul {
+  display: none;
+}
+
+#welcome {
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+#welcome .welcome-text {
+  grid-column: 1/6;
+}
+
+#welcome .welcome-img {
+  grid-column: 6/9;
+}
+
+#welcome .welcome-img img {
+  width: 100%;
+}
+
+#welcome .welcome-text a {
+  margin: 20px 0;
+}
+
+#portfolio {
+  background-image: url(./assets/square_bg.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  padding: 3rem 1rem;
+}
+
+#portfolio h3 {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.projects {
+  margin: 2rem 0;
+}
+
+.projects a {
+  grid-column: 1/9;
+  display: flex;
+  margin: 2rem 0;
+}
+
+.projects a * {
+  margin: 0 1.5rem;
+  max-width: 40%;
+  align-self: center;
+}
+.projects h4 {
+  color: #9994f7;
+}
+
+#skills {
+  padding: 30px 20px;
+  background: #07083e;
+}
+
+#skills h3 {
+  text-align: center;
+}
+
+#skills ul {
+  margin: 40px 0;
+}
+
+#skills li {
+  padding: 10px;
+  background: rgba(61, 64, 104, 0.4);
+  grid-column: span 4;
+  text-align: center;
+}
+#skills img {
+  height: 80px;
+  margin: 10px auto;
+}
+#skills p {
+  text-align: center;
+  margin: 0 20px;
+}
+
+#contact {
+  padding: 30px 20px;
+  background: #080936;
+}
+
+#contact h3,
+#contact p {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+#contact form {
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  margin: 10px 0;
+}
+
+#contact textarea {
+  max-width: 100%;
+  height: 140px;
+}
+
+#contact .button {
+  margin-top: 10px;
+}
+
+footer {
+  padding: 30px 20px;
+  background-color: #14153d;
+  background-image: url(assets/footer_image.png);
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+footer .copyright {
+  grid-column: 1/5;
+  font-size: 10px;
+}
+footer .social {
+  grid-column: 5/9;
+  display: flex;
+  justify-content: flex-end;
+}
+footer li {
+  margin: 0 6px;
+}
+footer img {
+  width: 30px;
 }
 
 @media screen and (min-width: 620px) {
+  #welcome .welcome-text {
+    grid-column: 1/6;
+    align-self: center;
+  }
+
+  #welcome .welcome-img {
+    grid-column: 6/9;
+  }
+
+  #welcome .welcome-img img {
+    width: 100%;
+  }
+  .projects a {
+    grid-column: span 4;
+    display: block;
+    margin: 2rem 0;
+  }
+
+  .projects a * {
+    margin: 0 1.5rem;
+    max-width: 60%;
+    margin: 10px 20%;
+  }
+
+  .projects a:last-child {
+    grid-column: 3/7;
+  }
+  #skills {
+    padding: 30px 100px;
+  }
+  footer {
+    background-size: 20%;
+  }
+  .projects h4 {
+    text-align: center;
+  }
+  footer .copyright {
+    grid-column: 1/5;
+    font-size: 13px;
+  }
 }
 
 @media screen and (min-width: 960px) {
   body {
     font-size: 18px;
+  }
+
+  .grid {
+    width: 100%;
+    max-width: 1060px;
+    margin: 0 auto;
+  }
+  .nav h1 {
+    grid-column: 1/3;
+    margin: 0 1rem;
+    padding: 0;
+  }
+  .leading {
+    margin: 1rem 0;
+  }
+  .nav ul {
+    display: flex;
+    grid-column: 6/9;
+    justify-content: space-around;
+  }
+  .nav {
+    margin-top: 1rem;
+  }
+  #welcome .welcome-text {
+    align-self: center;
+    grid-column: 1/5;
+  }
+
+  #welcome .welcome-img {
+    grid-column: 6/9;
+  }
+
+  #welcome .welcome-img img {
+    width: 100%;
+  }
+
+  #welcome .welcome-text a {
+    margin: 20px 0;
+  }
+  #welcome {
+    padding-bottom: 4rem;
+  }
+  .projects a:nth-child(1) {
+    grid-column: 2/4;
+  }
+  .projects a:nth-child(2) {
+    grid-column: 4/6;
+    padding-top: 140px;
+  }
+  .projects a:nth-child(3) {
+    grid-column: 6/8;
+  }
+
+  .projects a * {
+    max-width: 80%;
+    margin: 3rem 10%;
+  }
+  #skills {
+    padding: 10px 20px;
+    background: #07083e;
+  }
+
+  #skills h3 {
+    text-align: center;
+  }
+
+  #skills ul {
+    margin: 40px auto;
+  }
+
+  #skills li {
+    grid-column: span 2;
+  }
+  footer {
+    padding: 40px 20px;
+    background-size: 20%;
+  }
+
+  footer .copyright {
+    font-size: 1.2rem;
   }
 }
 
@@ -91,4 +380,58 @@ h4 {
   body {
     font-size: 20px;
   }
+  .grid {
+    width: 100%;
+    max-width: 1260px;
+    margin: 0 auto;
+  }
+
+  .site-nav {
+    padding: 0;
+  }
+  #welcome,
+  #portfolio,
+  #skills,
+  #contact {
+    padding: 90px 0;
+  }
+  .leading {
+    margin: 20px 0;
+  }
+  .projects a:nth-child(1) {
+    grid-column: 1/3;
+  }
+  .projects a:nth-child(2) {
+    grid-column: 4/6;
+    padding-top: 140px;
+  }
+  .projects a:nth-child(3) {
+    grid-column: 7/9;
+  }
+  .projects a * {
+    max-width: 100%;
+    margin: 30px 0%;
+  }
+  footer {
+    padding: 80px 0;
+    background-size: 30%;
+  }
+  footer .copyright {
+    grid-column: 1/4;
+  }
+  footer .social {
+    grid-column: 6/9;
+  }
+  footer img {
+    width: 30px;
+  }
+
+  /* footer {
+    padding: 50px 20px;
+    background-size: 30%;
+  }
+
+  footer .copyright {
+    font-size: 1.2rem;
+  } */
 }
